@@ -1,0 +1,292 @@
+/*FÖRSTA RAD-------------------------------------------------------------------------*/
+.keyboard{
+  width: 100%;
+  background-color: rgb(88,88,88);
+  border-radius: 15px;
+  padding: 5px 0px;
+  height: 50vh;
+  border: bottom;
+}
+
+.keyboard-button{
+  text-align: center;
+
+}
+.keyboard-row1{
+  display: block;
+}
+
+/*Jag gör procent på height för att när man zoomar ut på hemisdan det är max size keyboarden kommer att vara*/
+/*(border-radius och border) för att få alla keys att se bättre ut och runda till dem.*/
+/*(outline: none;) gör så att när man klickar på botton du får inte en ruta som markerar att knappen har blivit tryckt. Det brukar vara blå ruta.*/
+/*((display: inline-flex;) (align-items: center;) (justify-content: center;) Alla de här koderna kommer att centrera alla icons som "shift keys" "backspace keys" inom key classet.) Alltså kommer inte icon vara exakt centrerad.*/
+/*(Margin) för att få alla keys att vara brevid varandra.*/
+.key{
+  height: 25px;
+  width: 6%; /*vad gör den koden??????*/
+  max-width: 72px; /*vad gör den koden ????????*/
+  margin: 2px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(48,48,48);
+  color: white;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+
+
+
+#esc, #delete, #home, #pg-dn{ /*------------------------------------------------------------------------------------------------------------------------------*/
+  height: 25px;
+  width: 6%;
+  margin: 2px;
+  border: none;
+  background: rgb(48,48,48);
+  color: white;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+/*Alla id här kommer jag att ändra på deras shape senare med (radius).
+Här använder jag (active) för att när man ska licka på keybboarden med
+muset så ska koden här få knappen att byta färg.*/
+.key:active, #esc:active, #delete:active, #home:active, #pg-dn:active, .key:active{
+  background-color: white;
+  color: black;
+}
+
+#esc{
+  display: inline-block;
+  height: 25px;
+  width: 6%;
+  max-width: 70px;
+  border-radius: 3px;
+  border-radius: 15px 5px 5px 5px;
+}
+
+#delete{
+  display: inline-block;
+  max-width: 70px;
+  border-radius: 3px;
+  border-radius: 5px 15px 5px 5px;
+}
+
+#home{
+  display: inline-block;
+  max-width: 70px;
+  border-radius: 15px 5px 5px 5px;
+
+}
+
+#pg-dn{
+  display: inline-block;
+  max-width: 70px;
+  margin: 2px;
+  border-radius: 3px;
+  border-radius: 5px 15px 5px 5px;
+}
+
+/*ANDRA RAD-------------------------------------------------------------------------*/
+.key_2, #backspace-key{
+margin: 2px;
+border-radius: 5px;
+border: none;
+background: rgb(48,48,48);
+color: white;
+outline: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+vertical-align: top;
+padding: 0;
+cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+#backspace-key{ /*fixa purportion på den här!!*/
+  width: 100vw;
+  height: 50px;
+  width: 9%;
+  max-width: 120px;
+  padding-right: 80px;
+  cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+.key_2{
+  height: 50px;
+  width: 6%;
+  max-width: 73.5px;
+  padding-right: 40px;
+}
+
+/*TREDJE RAD-------------------------------------------------------------------------*/
+#enter{
+  margin: 2px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(48,48,48);
+  color: white;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  padding-right: 40px;
+  cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+
+
+}
+
+#tab{
+  height: 50px;
+  width: 7.5%;
+  max-width: 7.5%;
+  margin: 2px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(48,48,48);
+  color: white;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  padding-right: 40px;
+  cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+#plus{
+  height: 100px;
+  width: 5%;
+  max-width: 73.5px;
+  margin: 2px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(48,48,48);
+  color: white;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  padding-right: 40px;
+  cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+#enter{ /*Ändra till height 100px*/
+  height: 100px;
+  width: 5%;
+  max-width: 80px;
+  border-width: 50px 18px 18px 18px;
+  border-top: 50px;
+  border-bottom: -50px;
+}
+
+.key_2:active, #tab:active, #backspace-key:active, #enter:active, #plus:active{
+  background-color: white;
+  color: black;
+}
+
+/*FJÄRDE RAD-------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*FEMTE RAD-------------------------------------------------------------------------*/
+#enter_NP, #ctrl{
+margin: 2px;
+border-radius: 5px;
+border: none;
+background: rgb(48,48,48);
+color: white;
+outline: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+vertical-align: top;
+padding: 0;
+cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+#enter_NP{
+  #plus{
+    height: 100px;
+    width: 5%;
+    max-width: 73.5px;
+    margin: 2px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(48,48,48);
+    color: white;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    padding-right: 40px;
+    cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+  }
+}
+
+/*SJÄTTE RAD-------------------------------------------------------------------------*/
+
+#ctrl{
+  height: 50px;
+  width: 6%;
+  margin: 2px;
+  border: none;
+  background: rgb(48,48,48);
+  color: white;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  cursor: pointer; /*för när man har muset över ett keyboard knapp det ska ha pekfingret framme.*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.keyspace{
+  height: 45px;
+  width: 300px;
+  background-color: rgb(48,48,48);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 2px;
+  max-width: 500px;
+
+}
+
+.keyspace:active{
+  background-color: white;
+}

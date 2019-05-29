@@ -1,106 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="keyboard.css">
-  <title> Keyboard </title>
-
+<link rel="stylesheet" type="text/css" href="index.css">
+<title> keyboard </title>
 </head>
 <body>
-<div class="keyboard">
+<script src="index.js"></script> <!--Jag linkar html med Javascript-->
 
+  <h2>Javascript Capture Keyboard Input Example</h2>
+  <h3>onkeydown - onkeyup</h3>
+  Key Pressed : <span id="kp"></span>
+  <br />
+  Key Code : <span id="kc"></span>
+  <p id="status">Keyboard Event Status</p>
+
+
+<div class="keyboard">
   <div class="keyboard-button">
     <div class="keyboard-row1">
+<!-- FÖRSTA RAD ------------------------------------------------------------------------------------------->
+    <div class=".keyboard-row1">
+      <button type="button" data-key="27" id="esc"> esc </button>
+      <button type="button" data-key="112" class="key"> F1 </button>
+      <button type="button" data-key="113" class="key"> F2 </button>
+      <button type="button" data-key="114" class="key"> F3 </button>
+      <button type="button" data-key="115" class="key"> F4 </button>
+      <button type="button" data-key="116" class="key"> F5 </button>
+      <button type="button" data-key="117" class="key"> F6 </button>
+      <button type="button" data-key="118" class="key"> F7 </button>
+      <button type="button" data-key="119" class="key"> F8 </button>
+      <button type="button" data-key="120" class="key"> F9 </button>
+      <button type="button" data-key="121" class="key"> F10 </button>
+      <button type="button" data-key="122" class="key"> F11 </button>
+      <button type="button" data-key="123" class="key"> F12 </button>
+      <button type="button" data-key="45" class="key"> Insert </button>
+      <button type="button" data-key="46" id="delete"> delete </button>
+      <button type="button" data-key="36" id="home"> home </button>
+      <button type="button" data-key="35" class="key"> end </button>
+      <button type="button" data-key="33" class="key"> pg up </button>
+      <button type="button" data-key="34" id="pg-dn"> pg dn </button>
+    </div>
 
-        <div id="keyboard-row1_1">
-          <button type="button" class="key"> esc </button>
-        </div>
 
-      <button type="button" class="key"> F1 </button>
-      <button type="button" class="key"> F2 </button>
-      <button type="button" class="key"> F3 </button>
-      <button type="button" class="key"> F4 </button>
-      <button type="button" class="key"> F5 </button>
-      <button type="button" class="key"> F6 </button>
-      <button type="button" class="key"> F7 </button>
-      <button type="button" class="key"> F8 </button>
-      <button type="button" class="key"> F9 </button>
-      <button type="button" class="key"> F10 </button>
-      <button type="button" class="key"> F11 </button>
-      <button type="button" class="key"> F12 </button>
-      <button type="button" class="key"> Insert </button>
-
-        <div id="keyboard-row1_2">
-          <button type="button" class="key"> delete </button>
-        </div>
-
-        <div id="keyboard-row1_3">
-          <button type="button" class="key"> home </button>
-        </div>
-
-      <button type="button" class="key"> end </button>
-      <button type="button" class="key"> pg up </button>
-
-        <div id="keyboard-row1_4">
-          <button type="button" class="key"> pg dn </button>
-        </div>
+<!-- ANDRA RAD ------------------------------------------------------------------------------------------->
+    <div class=".keyboard-row1">
+      <button type="button" class="key_2"> 1/2<br>§ </button>
+      <button type="button" class="key_2"> !<br>1 </button>
+      <button type="button" class="key_2"> "<br>2 @ </button>
+      <button type="button" class="key_2"> #<br>3 </button>
+      <button type="button" class="key_2"> ¤<br>4 </button>
+      <button type="button" class="key_2"> %<br>5 </button>
+      <button type="button" class="key_2"> &<br>6 </button>
+      <button type="button" class="key_2"> /<br>7 </button>
+      <button type="button" class="key_2"> (<br>8 </button>
+      <button type="button" class="key_2"> )<br>9 </button>
+      <button type="button" class="key_2"> =<br>0 </button>
+      <button type="button" class="key_2"> ?<br>+ </button>
+      <button type="button" class="key_2"> `<br>´ </button>
+      <button type="button" id="backspace-key"> &#8592; </button>
+      <button type="button" class="key_2"> numlk </button>
+      <button type="button" class="key_2"> / </button>
+      <button type="button" class="key_2"> * </button>
+      <button type="button" class="key_2"> - </button>
     </div>
 
 
 
+<!-- TREDJE RAD ------------------------------------------------------------------------------------------->
+    <div class=".keyboard-row1">
+      <button type="button" id="tab"> &#8646; </button>
+      <button type="button" class="key_2"> Q </button>
+      <button type="button" class="key_2"> W </button>
+      <button type="button" class="key_2"> E </button>
+      <button type="button" class="key_2"> R </button>
+      <button type="button" class="key_2"> T </button>
+      <button type="button" class="key_2"> Y </button>
+      <button type="button" class="key_2"> U </button>
+      <button type="button" class="key_2"> I </button>
+      <button type="button" class="key_2"> O </button>
+      <button type="button" class="key_2"> P </button>
+      <button type="button" class="key_2"> Å </button>
+      <button type="button" class="key_2"> ^<br>¨ </button>
+      <button type="button" id="enter"> &#8629; </button>
+      <button type="button" class="key_2"> 7<br>home </button>
+      <button type="button" class="key_2"> 8<br> pil up här </button>
+      <button type="button" class="key_2"> 9<br>pg up </button>
+      <button type="button" id="plus"> + </button>
+    </div>
+<!-- FJÄRDE RAD ------------------------------------------------------------------------------------------->
+    <div class=".keyboard-row1">
+      <button type="button" class="key_2"> caps lock </button>
+      <button type="button" class="key_2"> A </button>
+      <button type="button" class="key_2"> S </button>
+      <button type="button" class="key_2"> D </button>
+      <button type="button" class="key_2"> F </button>
+      <button type="button" class="key_2"> G </button>
+      <button type="button" class="key_2"> H </button>
+      <button type="button" class="key_2"> J </button>
+      <button type="button" class="key_2"> K </button>
+      <button type="button" class="key_2"> L </button>
+      <button type="button" class="key_2"> Ö </button>
+      <button type="button" class="key_2"> Ä </button>
+      <button type="button" class="key_2"> *<br>' </button>
+      <button type="button" class="key_2"> 4<br>pil här </button>
+      <button type="button" class="key_2"> 5 </button>
+      <button type="button" class="key_2"> 6<br>en pil här </button>
+    </div>
+<!-- FEMTE RAD--------------------------------------------------------------------------->
+    <div class=".keyboard-row1">
+      <button type="button" class="key_2"> shift </button>
+      <button type="button" class="key_2"> ><br>< </button>
+      <button type="button" class="key_2"> Z </button>
+      <button type="button" class="key_2"> X </button>
+      <button type="button" class="key_2"> C </button>
+      <button type="button" class="key_2"> V </button>
+      <button type="button" class="key_2"> B </button>
+      <button type="button" class="key_2"> N </button>
+      <button type="button" class="key_2"> M </button>
+      <button type="button" class="key_2"> ;<br>, </button>
+      <button type="button" class="key_2"> :<br>. </button>
+      <button type="button" class="key_2"> -<br>_ </button>
+      <button type="button" class="key_2"> shift </button>
+      <button type="button" class="key_2"> 1<br>end </button>
+      <button type="button" class="key_2"> 2<br>pil ner </button>
+      <button type="button" class="key_2"> 3<br>pg dn </button>
+      <button type="button" id="enter_NP"> &#8629; </button>
+    </div>
+<!-- SJÄTTE RAD--------------------------------------------------------------------------->
+    <div class=".keyboard-row1">
+      <button type="button" id="ctrl"> ctrl </button>
+      <button type="button" class="key_2"> fn </button>
+      <button type="button" class="key_2"> windows </button>
+      <button type="button" class="key_2"> alt </button>
+      <button type="button" class="keyspace"> </button>
+      <button type="button" class="key_2"> alt gr </button>
+      <button type="button" class="key_2"> ctrl </button>
+      <button type="button" class="key_2"> < </button>
+      <button type="button" class="key_2"> ^  </button>
+      <button type="button" class="key_2"> v  </button>
+      <button type="button" class="key_2"> > </button>
+      <button type="button" class="key_2"> 0<br>insert </button>
+      <button type="button" class="key_2"> ,<br>delete </button>
+    </div>
 
 
 
-
-
-
-
-    <div class="keyboard-row1">
-      <button type="button" class="key-2"> 1/2 </button>
-      <button type="button" class="key-2"> 1 </button>
-      <button type="button" class="key-2"> 2 </button>
-      <button type="button" class="key-2"> 3 </button>
-      <button type="button" class="key-2"> 4 </button>
-      <button type="button" class="key-2"> 5 </button>
-      <button type="button" class="key-2"> 6 </button>
-      <button type="button" class="key-2"> 7 </button>
-      <button type="button" class="key-2"> 8 </button>
-      <button type="button" class="key-2"> 9 </button>
-      <button type="button" class="key-2"> 0 </button>
-      <button type="button" class="key-2"> + </button>
-      <button type="button" class="key-2"> ´ </button>
-      <button type="button" id="backspace-key"> &#8592; </button> <!-- fixa posionen av den-->
-      <button type="button" class="key-2"> numlk </button>
-      <button type="button" class="key-2"> / </button>
-      <button type="button" class="key-2"> * </button>
-      <button type="button" class="key-2"> - </button> <!-- fixa posionen av den-->
-    </div
-
-
-
-
-    <div class="keyboard-row1">
-      <button type="button" id="tab"> 1/2 </button>
-      <button type="button" class="key-2"> Q </button>
-      <button type="button" class="key-2"> W </button>
-      <button type="button" class="key-2"> E </button>
-      <button type="button" class="key-2"> R </button>
-      <button type="button" class="key-2"> T </button>
-      <button type="button" class="key-2"> Y </button>
-      <button type="button" class="key-2"> U </button>
-      <button type="button" class="key-2"> I </button>
-      <button type="button" class="key-2"> O </button>
-      <button type="button" class="key-2"> P </button>
-      <button type="button" class="key-2"> Å </button>
-      <button type="button" class="key-2"> ~ </button>
-      <button type="button" id="enter"> ----- </button> <!-- fixa posionen av den-->
-      <button type="button" class="key-2"> 7 </button>
-      <button type="button" class="key-2"> 8 </button>
-      <button type="button" class="key-2"> 9 </button>
-      <button type="button" class="key-2"> + </button> <!-- fixa posionen av den-->
-    </div
-
-    <button type="button" class="keyspace"></botton><!-- fixa?????????-->
-  </div>
+    </div>
 
 
 
